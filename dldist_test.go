@@ -10,9 +10,12 @@ func TestDLDist(t *testing.T) {
 		{"", "", 0},
 		{"", "ab", 2},
 		{"a", "ab", 1},
-		{"abc", "adc", 1},
+		{"a", "b", 1},
 		{"ab", "ba", 1},
+		{"abc", "adc", 1},
+		{"a", "bc", 2},
 		{"ca", "abc", 2},
+		{"acomnad", "command", 3},
 	}
 
 	for _, c := range cases {
